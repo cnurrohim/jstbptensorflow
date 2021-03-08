@@ -1,0 +1,61 @@
+.peta_jawatimur{
+	margin: 0 auto;
+	display: block;
+}
+
+#peta_jawatimur path,.peta_jawatimur path{
+	/*stroke: #000 !important;
+	stroke-width: 1px;*/
+	fill: #D3D3D3 !important;
+	font-family: HELVETICA;
+}
+
+.red{ background-color: #ff6363  !important; }
+.green{ background-color: #8fff63  !important; }
+.blue{ background-color: #63c4ff  !important; }
+.yellow{ background-color: #fffa9e  !important; }
+
+#peta_jawatimur path.red{ fill: #ff6363  !important; }
+#peta_jawatimur path.green{ fill: #8fff63  !important; }
+#peta_jawatimur path.blue{ fill: #63c4ff  !important; }
+#peta_jawatimur path.yellow{ fill: #fffa9e  !important; }
+
+.peta_jawatimur path.red{ fill: #ff6363  !important; }
+.peta_jawatimur path.green{ fill: #8fff63  !important; }
+.peta_jawatimur path.blue{ fill: #63c4ff  !important; }
+.peta_jawatimur path.yellow{ fill: #fffa9e  !important; }
+
+#peta_jawatimur path:hover,.peta_jawatimur path:hover{
+  fill: #b5b5b5 !important;
+  cursor: pointer;
+}
+
+text{
+	fill: #000;
+}
+#info-box p{
+	padding: 0;
+	margin: 0;
+}
+#info-box p.h1{
+	font-weight: bolder;
+	padding-bottom: 5px; 
+	border-bottom: 1px solid #999;
+}
+#info-box {
+  display: none;
+  position: absolute;
+  top: -60px;
+  left: -100px;
+  z-index: 1;
+  background-color: #eee;
+  border: 0.3px solid #FFF;
+  border-radius: 1px;
+  padding: 5px;
+  font-family: arial;
+  font-size: 14px;
+  color: #666;
+  text-transform: capitalize;
+  box-shadow: 2px 5px 10px rgba(0,0,0,0.4);
+}
+

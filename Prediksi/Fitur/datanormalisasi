@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JST</title>
+	<link type="text/css" rel="stylesheet" href="../../Assets/style.css" />
+	<link type="text/css" rel="stylesheet" href="../../Assets/table.css" />
+</head>
+<body>
+
+	<nav></nav>
+
+	<div class="main-container">
+		<div class="sub-menu-ul"></div>
+
+		<div class="data-table inBlock"></div>
+
+		<div class="data-table-normalisasi inBlock"></div>
+		<style type="text/css">
+			.inBlock{
+				display: inline-block;
+				vertical-align: top;
+			}
+		</style>
+	</div>
+
+	<script type='module' src='./datanormalisasi.js'></script>
+</body>
+</html>

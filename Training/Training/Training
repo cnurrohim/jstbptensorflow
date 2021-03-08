@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JST</title>
+  <link type="text/css" rel="stylesheet" href="../../Assets/style.css" />
+  <link type="text/css" rel="stylesheet" href="../../Assets/table.css" />
+  <script src="../../Lib/plotly-latest.min.js"></script>
+  <script src="../../Lib/tf.min.js"></script>
+</head>
+<body>
+
+  <nav></nav>
+
+  <div class="main-container">
+    <div class="sub-menu-ul"></div>
+    
+      <div id="plot"></div>
+      <div class="bla" id="bla"></div>
+    <div class="sub-container">
+      <button id='startTraining' class="btn btn-green">Mulai Training</button>
+    </div>
+    <div class="sub-container">
+      <div id="info"></div>
+      <div id="infoMSE"></div>
+      <div id="infoBobot"></div>
+    </div>
+  </div>
+  <script type='module' src='./Training.js'></script>
+</body>
+</html>

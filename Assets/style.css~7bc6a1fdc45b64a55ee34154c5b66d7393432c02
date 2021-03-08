@@ -1,0 +1,185 @@
+
+body{
+	padding:0;
+	margin:0;
+
+}
+nav{
+	background-color: #292929;
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	border-right: 5px solid #009aff;
+}
+nav h2{
+	color: #fff;
+	margin: 20px;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 100;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #009aff;
+}
+nav ul{
+	padding:0;
+}
+nav ul li{
+	list-style: none;
+}
+nav li a:hover{
+	padding-left: 50px;
+	background-color: #2b2b2b;
+	border-left: 20px solid #009aff;
+	transition: ease-in;
+}
+nav li a.main:hover{
+	background-color: #2b2b2b;
+}
+nav li a.main{
+	background-color: #009aff;
+}
+nav li a{
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	display: block;
+	padding: 20px;
+	
+}
+
+.main-container{
+	position: relative;
+	padding-top:60px;
+	margin-left: 250px;
+}
+
+.sub-container{
+	position: relative;
+
+}
+
+.sub-menu{
+	padding:0;
+	top:0;
+	position: absolute;
+}
+
+.submenuactive{
+	border-bottom: 5px solid #009aff;
+}
+
+.sub-menu li a:hover{
+	border-bottom: 5px solid #009aff;
+}
+.sub-menu li{
+	border-bottom: 1px solid #009aff;
+	display: inline-block;
+	font-size: 20px;
+	color: #333;
+	margin: 0 10px 0 0;
+}
+.sub-menu li a{
+	text-decoration: none;
+	color: #444;
+}
+
+input{
+	border: 1;
+	padding-left: 0.5em;
+}
+
+.input-group{
+	padding: 20px;
+}
+
+.input-group .title hr{
+	color: #000;
+	background-color: #000;
+}
+.input-group .title{
+	min-width: 500px;
+	color: #000;
+	font-weight: bolder;
+}
+.input-group input{
+	height: 1.5em;
+}
+.input-group label{
+	color: #000;
+	min-width: 260px;
+	display: inline-block;
+}
+
+.btn:hover{
+	cursor: pointer;
+}
+.btn{
+	min-width: 5em;
+	height: 2em;
+	border: 0;
+	border-radius: 2px;
+}
+
+.btn-green{
+	background: #46d035;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-red{
+	background: #ff6363;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-blue{
+	background: #63c4ff;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-yellow{
+	background: #fffa9e;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.input{
+	position: relative;
+	margin: 10px;
+}
+
+.map-container{
+	position: relative;
+}
+
+.camel-case{
+	text-transform: capitalize;
+}
+
+.table-group{
+	padding: 10px;
+}
+
+.table-group P{
+	margin: 10px 0 0 20px;
+	padding: 0;
+}
+
+.cluster-group{
+	margin: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.hidden{
+	display: none;
+}
+
+p.alert{
+	display: block;
+	color: #FFF;
+	background-color: #ff6363;
+	padding: 10px;
+}

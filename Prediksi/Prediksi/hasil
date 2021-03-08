@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JST</title>
+	
+	<script src="../../Lib/tf.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="../../Assets/style.css" />
+	<link type="text/css" rel="stylesheet" href="../../Assets/table.css" />
+	<link type="text/css" rel="stylesheet" href="../../Assets/map.css" />
+	<link type="text/css" rel="stylesheet" href="../../Assets/slider.css" />
+	
+</head>
+<body>
+
+	<nav></nav>
+
+	
+		<div class="data-table"></div>
+	
+
+	
+	<script type="module" src='hasil.js'></script>
+</body>
+</html>
