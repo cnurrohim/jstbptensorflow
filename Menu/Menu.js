@@ -1,17 +1,17 @@
 export function createNav(activeMenu){
 	const menus = [
 		{
-			href:'../../Training/Fitur/datapervariable',
+			href:'../../Training/Fitur/datapervariable.html',
 			class:'',
 			menu:'Training',
 		},
 		{
-			href:'../../Pengujian/Fitur/datapertahun',
+			href:'../../Pengujian/Fitur/datapertahun.html',
 			class:'',
 			menu:'Pengujian',
 		},
 		{
-			href:'../../Prediksi/Fitur/datapertahun',
+			href:'../../Prediksi/Fitur/datapertahun.html',
 			class:'',
 			menu:'Prediksi',
 		},

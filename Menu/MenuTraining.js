@@ -3,22 +3,22 @@ import {createLis} from './Menu.js';
 export function createSubNav(activeMenu){
 	const menus = [
 		{
-			href:'../Fitur/datapervariable',
+			href:'../Fitur/datapervariable.html',
 			class:'',
-			menu:'Data Per Variable',
+			menu:'Data Per Variable.html',
 		},
 		{
-			href:'../Fitur/datapertahun',
+			href:'../Fitur/datapertahun.html',
 			class:'',
 			menu:'Data Per Tahun',
 		},
 		{
-			href:'../Setting/setting',
+			href:'../Setting/setting.html',
 			class:'',
 			menu:'Setting',
 		},
 		{
-			href:'../Training/training',
+			href:'../Training/training.html',
 			class:'',
 			menu:'Training',
 		},

@@ -3,17 +3,17 @@ import {createLis} from './Menu.js';
 export function createSubNav(activeMenu){
 	const menus = [
 		{
-			href:'../Fitur/datapertahun',
+			href:'../Fitur/datapertahun.html',
 			class:'',
 			menu:'Data Per Tahun',
 		},
 		{
-			href:'../Setting/Setting',
+			href:'../Setting/Setting.html',
 			class:'',
 			menu:'Setting',
 		},
 		{
-			href:'../Pengujian/pengujian',
+			href:'../Pengujian/pengujian.html',
 			class:'',
 			menu:'Pengujian',
 		},
