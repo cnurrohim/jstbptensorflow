@@ -81,16 +81,20 @@ body{
 	padding:0;
 	margin:0;
 }
+
+.icon-menu{
+	margin-right: 10px;
+}
 nav.shift-left{
 	left:0px;
 }
 nav{
 	background-color: #292929;
+	padding-left: 3%;
 	width: 25%;
 	height: 100%;
 	position: fixed;
 	z-index: 999;
-	left: -200px;
 	padding-top: 10%; 
 }
 nav span:hover{
@@ -99,7 +103,7 @@ nav span:hover{
 
 nav span{
 	position: absolute;
-	right: -20px;
+	
 	font-size: 20px;
 	font-weight: bolder;
 	top:15px;

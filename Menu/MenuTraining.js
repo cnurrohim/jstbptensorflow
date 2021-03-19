@@ -18,7 +18,7 @@ export function createSubNav(activeMenu){
 			menu:'Setting',
 		},
 		{
-			href:'../Training/training.html',
+			href:'../Training/Training.html',
 			class:'',
 			menu:'Training',
 		},

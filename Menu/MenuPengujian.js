@@ -8,7 +8,7 @@ export function createSubNav(activeMenu){
 			menu:'Data Per Tahun',
 		},
 		{
-			href:'../Setting/Setting.html',
+			href:'../Setting/setting.html',
 			class:'',
 			menu:'Setting',
 		},
