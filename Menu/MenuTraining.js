@@ -5,7 +5,7 @@ export function createSubNav(activeMenu){
 		{
 			href:'../Fitur/datapervariable.html',
 			class:'',
-			menu:'Data Per Variable.html',
+			menu:'Data Per Variable',
 		},
 		{
 			href:'../Fitur/datapertahun.html',

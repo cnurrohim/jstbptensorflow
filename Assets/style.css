@@ -1,20 +1,97 @@
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('fonts/Open Sans/OpenSans-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('fonts/Open Sans/OpenSans-Bold.ttf')  format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('fonts/Open Sans/OpenSans-SemiBold.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: url('fonts/Open Sans/OpenSans-Italic.ttf')  format('truetype');
+  font-weight:lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('fonts/Open Sans/OpenSans-Light.ttf')  format('truetype');
+  font-weight:lighter;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('fonts/Roboto/Roboto-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('fonts/Roboto/Roboto-Italic.ttf')  format('truetype');
+  font-weight:normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto/Roboto-Light.ttf')  format('truetype');
+  font-weight:lighter;
+  font-style: normal;
+}
+
+/* BASE color */
+
+.cl_primary{ background-color: #f8faff;  }
+.cl_secondary{ background-color: #22305f;}
+.cl_tertiary{ background-color: #400101; }
+.cl_accents{ background-color: #D91E1E; }
+
+/* BASE color */
+
+/* FONTS */
+.font_primary{ font-family:'OpenSans-Bold'}
+.font_pairs{  font-family:'Roboto-Regular'}
+/* FONTS */
 
 body{
 	padding:0;
 	margin:0;
-
 }
 nav.shift-left{
 	left:0px;
 }
 nav{
 	background-color: #292929;
-	width: 200px;
+	width: 25%;
 	height: 100%;
 	position: fixed;
-	border-right: 5px solid #009aff;
 	z-index: 999;
 	left: -200px;
+	padding-top: 10%; 
 }
 nav span:hover{
 	cursor: pointer;
@@ -26,17 +103,15 @@ nav span{
 	font-size: 20px;
 	font-weight: bolder;
 	top:15px;
-	color:#009aff;
 }
 
 nav h2{
-	color: #fff;
 	margin: 20px;
-	font-size: 14px;
-	text-align: center;
+	font-size: 16px;
+	text-align: left;
 	font-weight: 100;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #009aff;
+	color: #b6c7ff;
 }
 nav ul{
 	padding:0;
@@ -45,34 +120,30 @@ nav ul li{
 	list-style: none;
 }
 nav li a:hover{
-	padding-left: 50px;
-	background-color: #2b2b2b;
-	border-left: 20px solid #009aff;
-	transition: ease-in;
+	font-weight: bolder;
 }
 nav li a.main:hover{
-	background-color: #2b2b2b;
+	
 }
 nav li a.main{
-	background-color: #009aff;
+	
 }
 nav li a{
-	text-transform: uppercase;
-	color: #fff;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 14px;
 	display: block;
 	padding: 20px;
-	
+	color: #fff;
+	letter-spacing: 0.1em;
 }
 
 .main-container.shift-left{
-	margin-left: 40px;
+	margin-left: 20%;
 }
 .main-container{
 	position: relative;
 	padding-top:60px;
-	margin-left: 250px;
+	margin-left: 30%;
 }
 
 
@@ -98,12 +169,12 @@ nav li a{
 	border-bottom: 1px solid #009aff;
 	display: inline-block;
 	font-size: 20px;
-	color: #333;
+	
 	margin: 0 10px 0 0;
 }
 .sub-menu li a{
 	text-decoration: none;
-	color: #444;
+	
 }
 
 input{
@@ -116,19 +187,19 @@ input{
 }
 
 .input-group .title hr{
-	color: #000;
+	
 	background-color: #000;
 }
 .input-group .title{
 	min-width: 500px;
-	color: #000;
+	
 	font-weight: bolder;
 }
 .input-group input{
 	height: 1.5em;
 }
 .input-group label{
-	color: #000;
+	
 	min-width: 260px;
 	display: inline-block;
 }

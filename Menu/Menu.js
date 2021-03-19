@@ -19,10 +19,11 @@ export function createNav(activeMenu){
 	
 
 	const nav = document.querySelector('nav');
-	nav.className = "shift-left";
+	nav.className = "shift-left cl_secondary";
 	nav.innerHTML = '';
 	const nav_h2 = document.createElement('h2');
 	nav_h2.innerHTML = 'Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur';
+	nav_h2.className = "font_primary";
 	nav.appendChild(nav_h2);
 
 	const nav_ul = document.createElement('ul');
@@ -44,6 +45,7 @@ export function createLis(menus,nav_ul,activeMenu,activeClass){
 		nav_li = document.createElement('li');
 		a = document.createElement('a');
 		a.innerHTML = menu.menu;
+		a.className = "font_pairs";
 		
 		
 		if(menu.class.length > 0){
