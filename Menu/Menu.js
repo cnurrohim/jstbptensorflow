@@ -1,19 +1,19 @@
 export function createNav(activeMenu){
 	const menus = [
 		{
-			href:'../../Training/Fitur/datapervariable.html',
+			href:'../Training/datapervariable.html',
 			class:'',
 			menu:'Training',
 			icon:'fas fa-brain icon-menu',
 		},
 		{
-			href:'../../Pengujian/Fitur/datapertahun.html',
+			href:'../Pengujian/datapertahun.html',
 			class:'',
 			menu:'Pengujian',
 			icon:'fas fa-check-double icon-menu',
 		},
 		{
-			href:'../../Prediksi/Fitur/datapertahun.html',
+			href:'../Prediksi/datapertahun.html',
 			class:'',
 			menu:'Prediksi',
 			icon:'fas fa-book-reader icon-menu',

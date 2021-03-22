@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JST</title>
+	<link type="text/css" rel="stylesheet" href="../Assets/style.css" />
+	<link type="text/css" rel="stylesheet" href="../Assets/table.css" />
+	<script src="../Lib/plotly-latest.min.js"></script>
+</head>
+<body>
+
+	<nav></nav>
+
+	<div class="main-container">
+		<div class="sub-menu-ul"></div>
+
+		<div class="input">
+			<button id='save' class="btn btn-green">Save</button>
+		</div>
+		<div class="data-table inBlock"></div>
+
+		<div class="data-table-normalisasi inBlock"></div>
+		<div class="grafik inBlock">
+			<div id="plot"></div>
+		</div>
+		<style type="text/css">
+			.inBlock{
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.grafik{
+				border: 0px solid #000;
+			    width: 40%;
+			    height: 400px;
+			}
+			.plotBox{
+				margin-bottom:30px;
+			}
+		</style>
+	</div>
+
+	<script type='module' src='./Datapertahun.js'></script>
+</body>
+</html>
