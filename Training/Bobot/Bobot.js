@@ -238,9 +238,7 @@ function hitungBobotNguyen(bobot,index,beta,v){
 function tampilkanHitunganNguyen(bobot,index,beta,v){
 	
 	const tableProperties = {
-		'cellspacing':0,
-		'cellpadding':'5px',
-		'border':1
+		'cellspacing':0
 	};
 
 
@@ -261,8 +259,8 @@ function tampilkanHitunganNguyen(bobot,index,beta,v){
 function tampilkanBias(bobot,index,min,max){
 	const tableProperties = {
 		'cellspacing':0,
-		'cellpadding':'5px',
-		'border':1
+		 
+		
 	};
 
 	const dataTable = new Table(tableProperties);
@@ -284,8 +282,8 @@ function tampilkanBias(bobot,index,min,max){
 function tampilkanBobot(bobot,index,last){
 	const tableProperties = {
 		'cellspacing':0,
-		'cellpadding':'5px',
-		'border':1
+		 
+		
 	};
 
 	const dataTable = new Table(tableProperties);

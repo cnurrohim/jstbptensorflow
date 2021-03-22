@@ -10,7 +10,6 @@ import {
 
 const properties = {
 	'cellspacing':0,
-	'cellpadding':'5px',
 	'border':0,
 	'class':'datapick'
 };

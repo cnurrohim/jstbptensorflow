@@ -5,7 +5,6 @@ import {data_wilayah} from './JS/dataWilayah.js';
 
 const propertiesTableAsli = {
 	'cellspacing':0,
-	'cellpadding':'5px',
 	'border':0,
 	'class':'datapick'
 };

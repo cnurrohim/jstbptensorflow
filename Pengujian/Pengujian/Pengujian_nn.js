@@ -59,9 +59,7 @@ usedSettingPengujian.forEach((idSetting)=>{
 
 
 const tableProperties = {
-	'cellspacing':0,
-	'cellpadding':'5px',
-	'border':1
+	'cellspacing':0	
 };
 
 const dataTable = new Table(tableProperties);

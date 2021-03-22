@@ -29,8 +29,6 @@ console.log(dataInputPrediksi);
 
 const propertiesTableAsli = {
 	'cellspacing':0,
-	'cellpadding':'5px',
-	'border':1,
 	'class':''
 };
 

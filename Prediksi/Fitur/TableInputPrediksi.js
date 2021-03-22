@@ -39,7 +39,6 @@ const input = function(row,tahunPrediksiSet,idtahun,idVar){
 
 const propertiesTableAsli = {
 	'cellspacing':0,
-	'cellpadding':'5px',
 	'border':0,
 	'class':'datapick'
 };

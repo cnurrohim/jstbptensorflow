@@ -23,9 +23,7 @@ if(Object.keys(hasilPrediksi).length > 0  && Object.keys(tahunPrediksi).length >
 	mainContainer.appendChild(hasilContainer);
 
 	const tableHasilProperties = {
-		'cellspacing':0,
-		'cellpadding':'5px',
-		'border':1
+		'cellspacing':0
 	};
 
 

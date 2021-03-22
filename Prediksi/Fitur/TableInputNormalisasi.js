@@ -60,9 +60,7 @@ variables.forEach((variable,index)=>{
 
 
 const propertiesTableAsli = {
-	'cellspacing':0,
-	'cellpadding':'5px',
-	'border':1,
+	'cellspacing':0
 };
 
 let dataTable = new Table(propertiesTableAsli);
@@ -146,8 +144,8 @@ export const inputPrediksi = dataTable;
 
 const propertiesTableNormalisasi = {
 	'cellspacing':0,
-	'cellpadding':'5px',
-	'border':1,
+	 
+	,
 };
 
 let dataTableNormalisasi = new Table(propertiesTableNormalisasi);

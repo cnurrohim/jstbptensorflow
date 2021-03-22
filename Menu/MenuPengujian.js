@@ -1,4 +1,4 @@
-import {createLis} from './Menu.js';
+import {createLis,renderMenu} from './Menu.js';
 
 export function createSubNav(activeMenu){
 	const menus = [
@@ -19,11 +19,14 @@ export function createSubNav(activeMenu){
 		},
 	];
 	
-	const sub_menu = document.querySelector('.sub-menu-ul');
+	const ulContainer =
+		{
+			ulSelector: '.sub-menu-ul',
+			class:'sub-menu',
+			activeClass:'submenuactive',
+			menus:menus,
+			activeMenu:activeMenu
+		};
 
-	const nav_ul = document.createElement('ul');
-	nav_ul.setAttribute('class','sub-menu');
-	const nav_ul_li = createLis(menus,nav_ul,activeMenu,'submenuactive');
-	
-	sub_menu.appendChild(nav_ul_li);
+	const ulMenu = renderMenu(ulContainer,menus);
 }

@@ -108,12 +108,15 @@
   }
 
   table{
-    border-color: #f1f1f1;
+    border-spacing: 2px;
+  }
+  table tr td{
+    padding: 5px;
   }
 
   .select-head td:nth-child(1){
-    background-color: #eef4ff;
-    color: #000;
+    
+    
     cursor: pointer;
   }
 
@@ -140,10 +143,17 @@
   width: 30px;
   padding:5px;
 }
+.toggleClassHidden:hover{
+  color:#eee;
+}
 .datapick tr td.toggleClassHidden{
   width: 298px;
   padding:8px;
 }
 .datapick tr td{
   border: 1px solid #999;
+}
+
+.main-container table{
+  width: 100%;
 }

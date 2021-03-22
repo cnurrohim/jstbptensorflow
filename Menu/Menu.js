@@ -77,6 +77,22 @@ export function createLis(menus,nav_ul,activeMenu,activeClass){
 	return nav_ul;
 }
 
+export function renderMenu(ulContainer,menus){
+	const sub_menu = document.querySelector(ulContainer.ulSelector);
+
+	const menuInfo = document.createElement('div');
+	menuInfo.setAttribute('class','menu-info font_pairs');
+	menuInfo.innerHTML = "lorem ipsum dolor sit amet";
+
+	const nav_ul = document.createElement('ul');
+	nav_ul.setAttribute('class',ulContainer.class);
+	
+	const ulMenu = createLis(menus,nav_ul,ulContainer.activeMenu,ulContainer.activeClass);
+	
+	sub_menu.appendChild(menuInfo);
+	sub_menu.appendChild(ulMenu);
+}
+
 /*
  fungsi untuk membuat navigasi dan container bergeser
  ke kiri atau kanan untuk memberi space lebih pada layar

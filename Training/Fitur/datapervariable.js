@@ -38,13 +38,11 @@ import {target_2018} from '../../Data/JS/targetAHH_2018.js';
 
 
 const tableProperties = {
-	'cellspacing':0,
-	'cellpadding':'5px',
-	'border':1
+	'cellspacing':0
 };
 
 const trProperties = {
-	'class':'no-select select-head '
+	'class':'no-select select-head cl_accents font_accents lighter'
 }
 
 createNav('Training');
@@ -74,7 +72,7 @@ variables.forEach((variable,index)=>{
 	});
 
 	let rowProperties = {
-		'class':'hidden body-'+variable
+		'class':'cl_secondary font_accents hidden body-'+variable
 	}
 
 	dataTable.addNewRow(tableHeader,false,'td',rowProperties);
@@ -117,7 +115,7 @@ variableTarget.forEach((variable,index)=>{
 			content: 'TARGET : '+variableTargetTitles[index],
 			attributes:{
 				colspan:6,
-				class:'toggleClassHidden head-'+variable,
+				class:'cl_accents font_accents toggleClassHidden head-'+variable,
 				'data-id':variable
 			}
 		}
@@ -132,7 +130,7 @@ variableTarget.forEach((variable,index)=>{
 	});
 
 	let rowProperties = {
-		'class':'hidden body-'+variable
+		'class':'cl_secondary font_accents hidden body-'+variable
 	}
 
 	dataTable.addNewRow(tableHeader,false,'td',rowProperties);

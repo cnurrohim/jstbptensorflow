@@ -11,9 +11,7 @@ import {data_2017} from '../../Data/JS/2017.js';
 import {data_2018} from '../../Data/JS/2018.js';
 
 const tableProperties = {
-	'cellspacing':0,
-	'cellpadding':'5px',
-	'border':1
+	'cellspacing':0
 };
 
 const trProperties = {
