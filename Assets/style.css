@@ -1,3 +1,7 @@
+.main-container,.sub-menu, .menu-info, .sub-menu-ul
+{
+	border: 0px solid #FFF;
+}
 @font-face {
   font-family: 'OpenSans-Regular';
   src: url('fonts/Open Sans/OpenSans-Regular.ttf')  format('truetype');
@@ -76,12 +80,25 @@
 /* FONTS */
 .font_primary{ font-family:'OpenSans-Bold'}
 .font_pairs{  font-family:'Roboto-Regular'}
+
+.ft_size_xs{ font-size: 12px;  }
+.ft_size_detail{ font-size: 14px;  }
+.ft_size_content{ font-size: 16px;  }
+.ft_size_subtitle{ font-size: 18px;  }
+.ft_size_head{ font-size: 20px;  }
+.ft_size_title{ font-size: 24px;  }
 /* FONTS */
+
+
 
 * { 
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
      box-sizing: border-box; 
+}
+
+input[type="checkbox" i],td{
+	box-sizing: initial !important; 	
 }
 
 .lighter{
@@ -183,10 +200,7 @@ nav li a{
 
 }
 
-.main-container,.sub-menu, .menu-info, .sub-menu-ul
-{
-	border: 0px solid #000;
-}
+
 
 .menu-info{
 	display: inline-block;

@@ -4,8 +4,6 @@ import {data_wilayah} from './JS/dataWilayah.js';
 
 
 const propertiesTableAsli = {
-	'cellspacing':0,
-	'border':0,
 	'class':'datapick'
 };
 
@@ -14,7 +12,7 @@ let dataTable = new Table(propertiesTableAsli);
 dataset.forEach((dataPerTahun,idtahun)=>{
 
 	const rowProperties1 = {
-		'class':'no-select select-head head-'+tahunDataSet[idtahun],
+		'class':'cl_accents no-select select-head head-'+tahunDataSet[idtahun],
 		'data-id':tahunDataSet[idtahun]
 	}
 
@@ -23,7 +21,7 @@ dataset.forEach((dataPerTahun,idtahun)=>{
 			content:'Data Tahun '+tahunDataSet[idtahun],
 			attributes: {
 				'colspan':variables.length+3,
-				class: 'toggleClassHidden head-'+tahunDataSet[idtahun],
+				class: 'ft_size_content font_pairs font_accents lighter toggleClassHidden head-'+tahunDataSet[idtahun],
 				'data-id':tahunDataSet[idtahun]
 			}
 		}
@@ -31,8 +29,8 @@ dataset.forEach((dataPerTahun,idtahun)=>{
 
 
 	let tableHeader2 = [
-		{content:'#'},
-		{content:'Wilayah',attributes:{'style':'width:250px;'}}
+		//{content:'#'},
+		{content:'Wilayah',attributes:{}}
 	];
 
 	variables.forEach((variable)=>{
@@ -41,7 +39,7 @@ dataset.forEach((dataPerTahun,idtahun)=>{
 	tableHeader2.push({content:'target'});
 
 	const rowProperties2 = {
-		'class':'hidden body-'+tahunDataSet[idtahun]
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary font_accents hidden body-'+tahunDataSet[idtahun]
 	}
 
 	dataTable.addNewRow(tableHeaderAsli,false,'td',rowProperties1);
@@ -57,7 +55,7 @@ dataset.forEach((dataPerTahun,idtahun)=>{
 		}
 
 		td_data = [
-			{content:index+1},
+			//{content:index+1},
 			{content:data_wilayah[row.wilayah],attributes:{class:'camel-case'}},
 		];
 

@@ -9,8 +9,6 @@ import {
 } from './DataMaster.js';
 
 const properties = {
-	'cellspacing':0,
-	'border':0,
 	'class':'datapick'
 };
 
@@ -28,7 +26,7 @@ data_TerNormalisasi.forEach((dataPerTahun,idtahun)=>{
 	}
 
 	const rowProperties1 = {
-		'class':'no-select select-head head-'+tahunDataSet[idtahun],
+		'class':'cl_accents no-select select-head head-'+tahunDataSet[idtahun],
 		'data-id':tahunDataSet[idtahun]
 	}
 
@@ -37,7 +35,7 @@ data_TerNormalisasi.forEach((dataPerTahun,idtahun)=>{
 			content:'Normalisasi',
 			attributes: {
 				'colspan':variables.length+1,
-				class: 'toggleClassHidden head-'+tahunDataSet[idtahun],
+				class: 'ft_size_content font_pairs font_accents lighter toggleClassHidden head-'+tahunDataSet[idtahun],
 				'data-id':tahunDataSet[idtahun]
 			}
 		},
@@ -60,7 +58,7 @@ data_TerNormalisasi.forEach((dataPerTahun,idtahun)=>{
 
 
 	const rowProperties2 = {
-		'class':'hidden body-'+tahunDataSet[idtahun]
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary font_accents hidden body-'+tahunDataSet[idtahun]
 	}
 
 	dataTable.addNewRow(tableHeader,false,'td',rowProperties1);
