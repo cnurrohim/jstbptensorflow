@@ -9,6 +9,7 @@ const propertiesTableAsli = {
 
 let dataTable = new Table(propertiesTableAsli);
 
+let iteration = 0;
 dataset.forEach((dataPerTahun,idtahun)=>{
 
 	const rowProperties1 = {
@@ -38,8 +39,10 @@ dataset.forEach((dataPerTahun,idtahun)=>{
 	});
 	tableHeader2.push({content:'target'});
 
+	const hidden = (iteration == 0) ? '': 'hidden' ;
+	iteration++;
 	const rowProperties2 = {
-		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary hidden body-'+tahunDataSet[idtahun]
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary '+hidden+' body-'+tahunDataSet[idtahun]
 	}
 
 	dataTable.addNewRow(tableHeaderAsli,false,'td',rowProperties1);

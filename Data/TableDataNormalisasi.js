@@ -14,6 +14,7 @@ const properties = {
 
 let dataTable = new Table(properties);
 
+let iteration = 0;
 data_TerNormalisasi.forEach((dataPerTahun,idtahun)=>{
 
 	const checkAll = {
@@ -56,9 +57,10 @@ data_TerNormalisasi.forEach((dataPerTahun,idtahun)=>{
 	tableHeader2.push({content:'target'});
 	tableHeader2.push({content:'pilih'});
 
-
+	const hidden = (iteration == 0) ? '': 'hidden' ;
+	iteration++;
 	const rowProperties2 = {
-		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary font_accents hidden body-'+tahunDataSet[idtahun]
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary font_accents '+hidden+' body-'+tahunDataSet[idtahun]
 	}
 
 	dataTable.addNewRow(tableHeader,false,'td',rowProperties1);

@@ -48,7 +48,7 @@ const trProperties = {
 createNav('Training');
 createSubNav('Data Per Variable');
 
-
+let iteration = 0;
 variables.forEach((variable,index)=>{
 	const dataTable = new Table(tableProperties);
 
@@ -71,8 +71,10 @@ variables.forEach((variable,index)=>{
 		tableHeader.push({content:tahunDataSet[tahunIndex]});
 	});
 
+	const hidden = (iteration == 0) ? '': 'hidden' ;
+	iteration++;
 	let rowProperties = {
-		'class':'cl_secondary font_accents hidden body-'+variable
+		'class':'cl_secondary font_accents '+hidden+' body-'+variable
 	}
 
 	dataTable.addNewRow(tableHeader,false,'td',rowProperties);

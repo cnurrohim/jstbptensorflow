@@ -45,6 +45,7 @@ const propertiesTableAsli = {
 
 let dataTable = new Table(propertiesTableAsli);
 
+let iteration = 0;
 prediksiDataInput.forEach((dataPerTahun,idtahun)=>{
 
 	const rowProperties1 = {
@@ -73,8 +74,10 @@ prediksiDataInput.forEach((dataPerTahun,idtahun)=>{
 		tableHeader2.push({content:variable});
 	});
 
+	const hidden = (iteration == 0) ? '': 'hidden' ;
+	iteration++;
 	const rowProperties2 = {
-		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary hidden body-'+tahunPrediksiSet[idtahun]
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary '+hidden+' body-'+tahunPrediksiSet[idtahun]
 	}
 
 	dataTable.addNewRow(tableHeaderAsli,false,'td',rowProperties1);
