@@ -17,7 +17,7 @@
 }
 
 .slider {
-  width: 80%;
+  
   text-align: center;
   overflow: hidden;
   margin:0 auto;
@@ -91,7 +91,7 @@
   display: inline-flex;
   width: 20px;
   height: 20px;
-  background: white;
+  
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -102,8 +102,8 @@
 .slider > a:active {
   top: 1px;
 }
-.slider > a:focus {
-  background: white;
+.slider > a:hover {
+  font-weight: bold;
 }
 
 /* Don't need button navigation */

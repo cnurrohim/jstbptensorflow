@@ -72,11 +72,18 @@ let tableHeader = [
 	{content:'Wilayah',attributes:{'style':'width:120px;'}},
 ];
 
+const headProperties = {
+		'class':'cl_accents ft_size_content font_pairs font_accents lighter '
+}
+
 variables.forEach((variable,idVar)=>{
 	tableHeader.push({content:variable});
 });
 
-dataTable.addNewRow(tableHeader,false,'td');
+const rowProperties = {
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary'
+}
+dataTable.addNewRow(tableHeader,false,'td',headProperties);
 alldataset.forEach((row,index)=>{
 
 	// let target = '-';
@@ -106,7 +113,9 @@ alldataset.forEach((row,index)=>{
 		{content:x7},
 		{content:t}
 	];
-	dataTable.addNewRow(td_data,false,'td');
+	
+
+	dataTable.addNewRow(td_data,false,'td',rowProperties);
 	
 });
 
@@ -122,7 +131,10 @@ let td_min = [
 	{content:dataSetMinMax.X7.min.toFixed(4)},
 	{content:dataSetMinMax.target.min.toFixed(2)},
 ];
-dataTable.addNewRow(td_min,false,'td');
+const rowMinMaxProperties = {
+		'class':'ft_size_xs font_pairs font_accents lighter cl_accents'
+}
+dataTable.addNewRow(td_min,false,'td',rowMinMaxProperties);
 
 let td_max = [
 	{content:'-'},
@@ -136,7 +148,7 @@ let td_max = [
 	{content:dataSetMinMax.X7.max.toFixed(2)},
 	{content:dataSetMinMax.target.max.toFixed(2)},
 ];
-dataTable.addNewRow(td_max,false,'td');
+dataTable.addNewRow(td_max,false,'td',rowMinMaxProperties);
 
 export const inputPrediksi = dataTable;
 
@@ -158,7 +170,7 @@ variables.forEach((variable,idVar)=>{
 	tableHeaderNormalisasi.push({content:variable});
 });
 
-dataTableNormalisasi.addNewRow(tableHeaderNormalisasi,false,'td');
+dataTableNormalisasi.addNewRow(tableHeaderNormalisasi,false,'td',headProperties);
 alldataset.forEach((row,index)=>{
 
 	const targetNormal = (row.target != '-') ? normalisasi(row.target,dataSetMinMax.target.min,dataSetMinMax.target.max).toFixed(4) : '-';
@@ -173,7 +185,7 @@ alldataset.forEach((row,index)=>{
 	});
 	td_data.push({content:targetNormal});
 
-	dataTableNormalisasi.addNewRow(td_data,false,'td');
+	dataTableNormalisasi.addNewRow(td_data,false,'td',rowProperties);
 	
 });
 
