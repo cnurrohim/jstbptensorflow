@@ -71,7 +71,7 @@
 
 .cl_primary{ background-color: #16213e;  }
 .cl_secondary{ background-color: #22305f;}
-.cl_tertiary{ background-color: #400101; }
+.cl_tertiary{ background-color: #11172d; }
 .cl_accents{ background-color: #c10042; }
 
 .font_accents{color:#dcdcdc;}
@@ -188,7 +188,7 @@ nav li a{
 
 .sub-container{
 	position: relative;
-	
+	padding: 10px;
 }
 
 .sub-menu{

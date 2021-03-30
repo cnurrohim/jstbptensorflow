@@ -59,7 +59,8 @@ usedSettingPengujian.forEach((idSetting)=>{
 
 
 const tableProperties = {
-	'cellspacing':0	
+	'cellspacing':0,
+	'class':'font_pairs font_accents lighter '
 };
 
 const dataTable = new Table(tableProperties);
@@ -83,19 +84,26 @@ usedJST.forEach((setting)=>{
 	header.push({content:'JST '+ setting.arsitekturJST.replace(/ /g,'-'),attributes:{colspan:jmlTargetJST*3} });
 });
 
-dataTable.addNewRow(header,false);
+const headerPropterties = {
+		'class':'cl_accents'
+};
+
+
+dataTable.addNewRow(header,false,'th',headerPropterties);
 const header2 = [];
 usedJST.forEach((setting)=>{
 	header2.push({content:'Output',attributes:{colspan:jmlTargetJST}});
 	header2.push({content:'Selisih',attributes:{colspan:jmlTargetJST}});
 	header2.push({content:'Square Error',attributes:{colspan:jmlTargetJST}});
 });
-dataTable.addNewRow(header2,false);
 
-dataTable.setEmptyData(dataPengujian);
+dataTable.addNewRow(header2,false,'th',headerPropterties);
 
 let no = 0;
 
+const bodyProperties = {
+	'class' : 'cl_tertiary'
+}
 
 
 dataPengujian.forEach((dataPerTahun,i)=>{
@@ -173,7 +181,7 @@ dataPengujian.forEach((dataPerTahun,i)=>{
 
 		});
 		
-		dataTable.addNewRow(listData,false);
+		dataTable.addNewRow(listData,false,'td',bodyProperties);
 	});
 });
 
@@ -215,8 +223,8 @@ usedJST.forEach((setting,index)=>{
 	performance.push({content:performance_stat});
 });
 
-dataTable.addNewRow(totalPerformance,false);
-dataTable.addNewRow(performance,false);
+dataTable.addNewRow(totalPerformance,false,'td',bodyProperties);
+dataTable.addNewRow(performance,false,'td',bodyProperties);
 
 dataTable.displayTable('#list-setting');
 

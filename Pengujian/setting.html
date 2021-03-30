@@ -4,17 +4,19 @@
 	<title>JST</title>
 	<link type="text/css" rel="stylesheet" href="../Assets/style.css" />
 	<link type="text/css" rel="stylesheet" href="../Assets/table.css" />
+	<link href="../Assets/css/all.css" rel="stylesheet">
 	<script src="../Lib/tf.min.js"></script>
 </head>
-<body>
+<body class="cl_primary">
 	<nav></nav>
 
 	<div class="main-container">
 		<div class="sub-menu-ul"></div>
 		
+		
+		<div id="setting-container" class="font_accents">
 
-		<div id="setting-container">
-			<div class="parent-component inline-block">
+			<div class="parent-component  inline-block ">
 				<div class="input-group">
 					<div class="alert" id="alert"></div>
 					<div class="input">
@@ -22,7 +24,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="parent-component inline-block">
+			<div class="parent-component inline-block overflow-sub-container">
 				<div class="input-group">
 					<div id="infoBobot"></div>
 				</div>
@@ -32,7 +34,19 @@
 		
 		
 	</div>
+	<style type="text/css">
+			.inBlock{
+				display: inline-block;
+				vertical-align: top;
+				width: 44%;
+			}
+			.overflow-sub-container{
+				
+				position: relative;
 
+				width: 1000px;
+			}
+		</style>
 	<script type='module' src='./Setting.js'></script>
 </body>
 </html>

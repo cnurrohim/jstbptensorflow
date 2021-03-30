@@ -39,7 +39,7 @@ dataset.forEach((dataPerTahun,idtahun)=>{
 	tableHeader2.push({content:'target'});
 
 	const rowProperties2 = {
-		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary font_accents hidden body-'+tahunDataSet[idtahun]
+		'class':'ft_size_xs font_pairs font_accents lighter cl_secondary hidden body-'+tahunDataSet[idtahun]
 	}
 
 	dataTable.addNewRow(tableHeaderAsli,false,'td',rowProperties1);

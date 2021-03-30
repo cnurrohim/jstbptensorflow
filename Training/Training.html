@@ -4,22 +4,22 @@
   <title>JST</title>
   <link type="text/css" rel="stylesheet" href="../Assets/style.css" />
   <link type="text/css" rel="stylesheet" href="../Assets/table.css" />
+  <link href="../Assets/css/all.css" rel="stylesheet">
   <script src="../Lib/plotly-latest.min.js"></script>
   <script src="../Lib/tf.min.js"></script>
 </head>
-<body>
+<body class="cl_primary">
 
   <nav></nav>
 
   <div class="main-container">
     <div class="sub-menu-ul"></div>
-    
+    <div class="sub-container cl_secondary font_accents">
+      <button id='startTraining' class="btn cl_accents font_accents">Mulai Training</button>
       <div id="plot"></div>
       <div class="bla" id="bla"></div>
-    <div class="sub-container">
-      <button id='startTraining' class="btn btn-green">Mulai Training</button>
     </div>
-    <div class="sub-container">
+    <div class="sub-container cl_secondary font_accents">
       <div id="info"></div>
       <div id="infoMSE"></div>
       <div id="infoBobot"></div>

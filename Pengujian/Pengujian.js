@@ -78,19 +78,26 @@ usedJST.forEach((setting)=>{
 	header.push({content:'JST '+ setting.arsitekturJST.replace(/ /g,'-'),attributes:{colspan:jmlTargetJST*3} });
 });
 
-dataTable.addNewRow(header,false);
+const headerPropterties = {
+		'class':'font_pairs font_accents lighter cl_accents'
+};
+
+dataTable.addNewRow(header,false,'th',headerPropterties);
 const header2 = [];
 usedJST.forEach((setting)=>{
 	header2.push({content:'Output',attributes:{colspan:jmlTargetJST}});
 	header2.push({content:'Selisih',attributes:{colspan:jmlTargetJST}});
 	header2.push({content:'Square Error',attributes:{colspan:jmlTargetJST}});
 });
-dataTable.addNewRow(header2,false);
+dataTable.addNewRow(header2,false,'th',headerPropterties);
 
 dataTable.setEmptyData(dataPengujian);
 
 let no = 0;
 
+const bodyProperties = {
+	'class' : 'cl_tertiary'
+}
 
 
 dataPengujian.forEach((dataPerTahun,i)=>{
@@ -168,7 +175,7 @@ dataPengujian.forEach((dataPerTahun,i)=>{
 
 		});
 		
-		dataTable.addNewRow(listData,false);
+		dataTable.addNewRow(listData,false,'td',bodyProperties);
 	});
 });
 

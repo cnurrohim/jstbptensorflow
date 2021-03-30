@@ -40,12 +40,18 @@ const tableProperties = {
 };
 
 const dataTable = new Table(tableProperties);
+const headerPropterties = {
+		'class':'font_pairs font_accents lighter cl_accents'
+};
 
 const header = ['#','Arsitektur JST','Learning Rate','Max Epoch','use'];
-dataTable.addNewRow(header,false);
+dataTable.addNewRow(header,false,'th',headerPropterties);
 
 dataTable.setEmptyData(settingTraining);
 
+const bodyProperties = {
+	'class' : 'cl_tertiary'
+}
 settingTraining.forEach((setting,index)=>{
 	const input = {
 			tag:'input',
@@ -65,7 +71,7 @@ settingTraining.forEach((setting,index)=>{
 		{content:input}
 	];
 	
-	dataTable.addNewRow(listSetting,false);
+	dataTable.addNewRow(listSetting,false,'td',bodyProperties);
 });
 
 
