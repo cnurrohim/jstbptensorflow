@@ -6,21 +6,25 @@ export function createSubNav(activeMenu){
 			href:'../Training/datapervariable.html',
 			class:'',
 			menu:'Data Per Variable',
+			info:'Info Data Per Variable'
 		},
 		{
 			href:'../Training/datapertahun.html',
 			class:'',
 			menu:'Data Per Tahun',
+			info:'Info Data Per Tahun'
 		},
 		{
 			href:'../Training/setting.html',
 			class:'',
 			menu:'Setting',
+			info:'Info Setting'
 		},
 		{
 			href:'../Training/Training.html',
 			class:'',
 			menu:'Training',
+			info:'Info Training'
 		},
 	];
 	

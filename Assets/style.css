@@ -67,6 +67,24 @@
   font-style: normal;
 }
 
+
+#plot {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+.main-svg {
+   background-color: transparent !important;
+}
+
+path.ygrid.crisp,path.xgrid.crisp{
+	stroke: rgba(255,255,255,0.25) !important;
+}
+
+.g-ytitle text, .g-xtitle text, .ytick text, .xtick text{
+   color: #fff !important;
+   fill: rgb(255,255,255) !important;
+}
+
 /* BASE color */
 
 .cl_primary{ background-color: #16213e;  }
@@ -90,7 +108,36 @@
 .ft_size_title{ font-size: 24px;  }
 /* FONTS */
 
+.btn{
+	min-width: 5em;
+	height: 2em;
+	border: 0;
+	border-radius: 2px;
+}
 
+.btn-green{
+	background: #46d035;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-red{
+	background: #ff6363;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-blue{
+	background: #63c4ff;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-yellow{
+	background: #fffa9e;
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 
 * { 
     -moz-box-sizing: border-box; 
@@ -190,6 +237,8 @@ nav li a{
 .sub-container{
 	position: relative;
 	padding: 10px;
+	width: fit-content;
+	min-width: 100%;
 }
 
 .sub-menu{
@@ -263,36 +312,7 @@ input{
 .btn:hover{
 	cursor: pointer;
 }
-.btn{
-	min-width: 5em;
-	height: 2em;
-	border: 0;
-	border-radius: 2px;
-}
 
-.btn-green{
-	background: #46d035;
-	color: #fff;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.btn-red{
-	background: #ff6363;
-	color: #fff;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.btn-blue{
-	background: #63c4ff;
-	color: #fff;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.btn-yellow{
-	background: #fffa9e;
-	color: #fff;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
 
 .input{
 	position: relative;
@@ -356,3 +376,4 @@ p.alert{
 	display: inline-block;
 	vertical-align: top;
 }
+

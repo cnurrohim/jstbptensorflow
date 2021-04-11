@@ -80,17 +80,28 @@ export function createLis(menus,nav_ul,activeMenu,activeClass){
 export function renderMenu(ulContainer,menus){
 	const sub_menu = document.querySelector(ulContainer.ulSelector);
 
-	const menuInfo = document.createElement('div');
-	menuInfo.setAttribute('class','menu-info font_pairs');
-	menuInfo.innerHTML = "lorem ipsum dolor sit amet";
+	
 
 	const nav_ul = document.createElement('ul');
 	nav_ul.setAttribute('class',ulContainer.class);
 	
 	const ulMenu = createLis(menus,nav_ul,ulContainer.activeMenu,ulContainer.activeClass);
-	
+	const menuInfo = renderInfo(ulContainer.activeMenu,menus);
 	sub_menu.appendChild(menuInfo);
 	sub_menu.appendChild(ulMenu);
+}
+
+function renderInfo(activeMenu,menus){
+	const menuInfo = document.createElement('div');
+	menuInfo.setAttribute('class','menu-info font_pairs');
+
+	const selectedMenu = menus.find((menu)=>{
+		return menu.menu == activeMenu
+	});
+	
+	menuInfo.innerHTML = (selectedMenu.info != undefined) ? selectedMenu.info : '';
+	
+	return menuInfo;
 }
 
 /*

@@ -61,7 +61,7 @@ const targetMin = getMin(alltarget,'target');
 const targetMax = getMax(alltarget,'target');
 
 
-const btnSave = document.querySelector('#btn_save');
+//const btnSave = document.querySelector('#btn_save');
 const btnStart = document.querySelector('#btn_start');
 //const btnHapus = document.querySelector('#btnHapusHasil');
 //const btnHasil = document.querySelector('#btnTampilHasil');
@@ -226,13 +226,13 @@ async function startProsesPrediksi(){
 // });
 
 
-btnSave.addEventListener('click',(e)=>{
-	e.preventDefault();
+// btnSave.addEventListener('click',(e)=>{
+// 	e.preventDefault();
 	
-	setStorage(dataInputPrediksiStorage,dataInputPrediksi);
-	//setStorage(hasilPrediksiStorage,hasilPrediksi);
-	//window.location.reload();
-});
+// 	setStorage(dataInputPrediksiStorage,dataInputPrediksi);
+// 	//setStorage(hasilPrediksiStorage,hasilPrediksi);
+// 	//window.location.reload();
+// });
 
 
 btnStart.addEventListener('click',(e)=>{
