@@ -180,13 +180,18 @@ function getdataPerVariable(wilayahInput,tahun){
   return dataPerVariable; 
 }
 
-// fungsi saat klik input text
+// tamplikan chart saat click input
 const allInputElements = document.querySelectorAll('.inputPrediksi');
 allInputElements.forEach( (input,indexInput)=>{
   input.addEventListener('click',refreshPlot,false);
   input.addEventListener('change',refreshPlot,false);
 });
 
+
+const closeCharts = function(e){
+  const charts = document.querySelector('#plot');
+  charts.innerHTML = '';
+}
 
 function inputPersenEventHandler(e){
   const target = this.getAttribute('data-target');
@@ -198,15 +203,11 @@ function inputPersenEventHandler(e){
 
   const persen = this.value;
 
-  
-
   const tahunSebelumnya = alltahun.findIndex((tahun)=>{
       return tahun == Number(tahunPrediksi)-1;
   });
   
 
-  
-  
   const nilaiSebelumnya = dataPerVariable[indexVariable][wilayah][variables[indexVariable]][tahunSebelumnya];
   const penambahan = nilaiSebelumnya + (persen/100 * nilaiSebelumnya);
   
@@ -229,14 +230,57 @@ function refreshPlot(){
     });
     
 
-    printPlot(variable,alltahun,dataPerVariable[indexVar][wilayahInput][variable],variableTitlesPendek[indexVar],tahunInput,wilayahInput);
+    const {plotData,plotLayout} = createPlot(alltahun,dataPerVariable[indexVar][wilayahInput][variable]);
 
     const nilaiSebelumnya = dataPerVariable[indexVar][wilayahInput][variable][tahunSebelumnya];
     const nilaiSekarang = dataPerVariable[indexVar][wilayahInput][variable][tahunSebelumnya+1]; 
     
-    inputPersen(nilaiSebelumnya,nilaiSekarang,tahunInput,wilayahInput,indexVar);
+    const {input,pSelisih,pPersen} = inputPersen(nilaiSebelumnya,nilaiSekarang,tahunInput,wilayahInput,indexVar);
+
+
+    printPlot(variableTitlesPendek,indexVar,tahunInput,variable,plotData,plotLayout,pSelisih,input,pPersen)    
 
    });
+
+  const removeButton = getRemoveButton();
+  plot.appendChild(removeButton);
+}
+
+function getRemoveButton(){
+  const btn_closeCharts = document.createElement('button');
+  btn_closeCharts.setAttribute('class', 'btn cl_accents font_accents float-right-top');
+  btn_closeCharts.setAttribute('id', 'closeCharts');
+  btn_closeCharts.innerHTML = 'X';
+
+  btn_closeCharts.addEventListener('click',closeCharts);
+  return btn_closeCharts;
+}
+
+function printPlot(variableTitlesPendek,indexVar,tahunInput,variable,plotData,plotLayout,pSelisih,input,pPersen){
+    const title = document.createElement('p');
+    //title.innerHTML = variableTitlesPendek[indexVar]+' '+arrayWilayah[indexVar-1]+' tahun '+tahunInput;
+    title.innerHTML = 'X'+(indexVar+1);
+
+    const plot = document.querySelector('#plot');
+    const subPlotContainer = document.createElement('div');
+    subPlotContainer.setAttribute('class', 'sub-plot-container');
+    
+    const newPlot = document.createElement('div');
+    newPlot.setAttribute('id', 'plot-'+variable);
+    newPlot.setAttribute('class', 'plotBox');
+
+    subPlotContainer.appendChild(title);
+    subPlotContainer.appendChild(newPlot);
+    plot.appendChild(subPlotContainer);
+
+    Plotly.newPlot('plot-'+variable, plotData,plotLayout);
+
+    subPlotContainer.appendChild(pSelisih);
+    subPlotContainer.appendChild(input);
+    subPlotContainer.appendChild(pPersen);
+
+    
+
 }
 
 function inputPersen(nilaiSebelumnya,nilaiSekarang,tahunInput,wilayahInput,indexVar){
@@ -253,32 +297,23 @@ function inputPersen(nilaiSebelumnya,nilaiSekarang,tahunInput,wilayahInput,index
   input.setAttribute('class', 'input-persen');
   input.addEventListener('change', inputPersenEventHandler, false);
   input.value = Number(persenTambahan.toFixed(2));
-  const plot = document.querySelector('#plot');
-  let p = document.createElement('span');
-  p.innerHTML = "Selisih dengan tahun sebelumnya sebesar ";
-  plot.appendChild(p);
-  plot.appendChild(input);
-  p = document.createElement('span');
-  p.innerHTML = " % <hr/><br/>";
-  plot.appendChild(p);
+
+  const pSelisih = document.createElement('span');
+  pSelisih.innerHTML = "Selisih dengan th. "+(tahunInput-1);
+  const pPersen = document.createElement('span');
+  pPersen.innerHTML = " %";
+  return {input,pSelisih,pPersen};
+
+  
 }
 
-function printPlot(variable,alltahun,dataPerVariable,variableTitlesPendek,tahun,idwilayah){
-  const title = document.createElement('p');
-  title.innerHTML = variableTitlesPendek+' '+arrayWilayah[idwilayah-1]+' tahun '+tahun;
-
-  const plot = document.querySelector('#plot');
-  const newPlot = document.createElement('div');
-  newPlot.setAttribute('id', 'plot-'+variable);
-  newPlot.setAttribute('class', 'plotBox');
-  plot.appendChild(title);
-  plot.appendChild(newPlot);
-
-   var layout = {
-      width: 400,
-      height: 200,
+function createPlot(alltahun,dataPerVariable){
+  
+   var plotLayout = {
+      width: 200,
+      height: 100,
       margin: {
-        l: 50,
+        l: 0,
         r: 0,
         b: 20,
         t: 0
@@ -290,7 +325,8 @@ function printPlot(variable,alltahun,dataPerVariable,variableTitlesPendek,tahun,
     y: dataPerVariable
   };
 
-  const data = [trace];
+  const plotData = [trace];
 
-  Plotly.newPlot('plot-'+variable, data,layout);
+  
+  return {plotData,plotLayout};
 }

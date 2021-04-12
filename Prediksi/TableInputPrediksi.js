@@ -12,7 +12,7 @@ import {
 let PrediksiData = getStorage(dataInputPrediksiStorage);
 let tahunPrediksi = getStorage(tahunPrediksiStorage);
 
-console.log(prediksisetRandom[0][0].X7);
+
 
 let prediksiDataInput = [];
 if(PrediksiData.length > 0){

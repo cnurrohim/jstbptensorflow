@@ -133,7 +133,7 @@ pickCheckboxs.forEach( function(pickCheckbox, index) {
       return dataPerTahun.length > 0;
     });
 
-    console.log(emptyPengujianData);
+
 
     setStorage(dataPengujianStorage,emptyPengujianData);
     setStorage(tahunPengujianStorage,tahunPengujian);

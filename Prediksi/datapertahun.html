@@ -14,14 +14,16 @@
 	<div class="main-container">
 		<div class="sub-menu-ul"></div>
 
-		<div class="input">
-			<button id='save' class="btn btn-green">Save</button>
-		</div>
-		<div class="data-table inBlock"></div>
+		<div class="overflow-sub-container" >
+			<div class="input">
+				<button id='save' class="btn btn-green">Save</button>
+			</div>
+			<div class="grafik">
+				<div id="plot"></div>
+			</div>
+			<div class="data-table inBlock"></div>
 
-		<div class="data-table-normalisasi inBlock"></div>
-		<div class="grafik inBlock">
-			<div id="plot"></div>
+			<div class="data-table-normalisasi inBlock"></div>
 		</div>
 		<style type="text/css">
 			.inBlock{
@@ -31,12 +33,27 @@
 			}
 
 			.grafik{
+				display: inline;
 				border: 0px solid #000;
-			    width: 40%;
+			    width: 100%;
 			    height: 400px;
+			    position: relative;
 			}
 			.plotBox{
 				margin-bottom:30px;
+			}
+			.sub-plot-container{
+				display: inline-block;
+				width: 200px;
+				margin:4px;
+			}
+			.float-right-top{
+				position: absolute;
+				top:0;
+				right:0;
+			}
+			#plot{
+				position: relative;
 			}
 		</style>
 	</div>
