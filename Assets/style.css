@@ -251,6 +251,7 @@ nav li a{
 
 }
 
+.overview h1{line-height: 1.2em;}
 .overview{
 	line-height: 1.8em;
 }
@@ -388,6 +389,11 @@ p.alert{
 	top:0;
 }
 @media screen and (max-width: 720px){
+	nav h2{margin:0; }
+	nav ul{margin:0; margin-top:10px; }
+	nav li a{
+		padding: 5px 5px 5px 5px;
+	}
 	nav{
 		width: 100%;
 		position: relative;
@@ -410,5 +416,14 @@ p.alert{
 	}
 	.menu-info{
 		padding-left: 0;
+	}
+	.input-group{
+		padding: 0;
+	}
+	.input button{
+		margin-bottom: 10px;
+	}
+	.input{
+		margin: 0;
 	}
 }
