@@ -3,6 +3,12 @@ import {createLis,renderMenu} from './Menu.js';
 export function createSubNav(activeMenu){
 	const menus = [
 		{
+			href:'../Pengujian/overview.html',
+			class:'',
+			menu:'Overview',
+			info:''
+		},
+		{
 			href:'../Pengujian/datapertahun.html',
 			class:'',
 			menu:'Data Per Tahun',

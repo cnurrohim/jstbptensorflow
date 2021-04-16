@@ -69,7 +69,7 @@
 
 
 #plot {
-  background-color: transparent !important;
+	padding-left:10px;
   color: #fff !important;
 }
 .main-svg {
@@ -94,6 +94,7 @@ path.ygrid.crisp,path.xgrid.crisp{
 
 .font_accents{color:#dcdcdc;}
 .font_accents_secondary{color:#ff689c;}
+.font_white{color:#fff;}
 /* BASE color */
 
 /* FONTS */
@@ -250,12 +251,15 @@ nav li a{
 
 }
 
-
+.overview{
+	line-height: 1.8em;
+}
 
 .menu-info{
 	display: inline-block;
-	color: #c2c9e0;
+	color: #bec5dca6;
 	padding: 10px;
+	max-width: 320px;
 }
 
 .submenuactive{
@@ -263,7 +267,7 @@ nav li a{
 }
 
 .sub-menu-ul{
-	margin-bottom: 100px;
+	margin-bottom: 20px;
 	display: inline-block;
 	width: 100%;
 }
@@ -377,3 +381,34 @@ p.alert{
 	vertical-align: top;
 }
 
+#mobile-menu{
+	display: none;
+	padding: 5px;
+	position: absolute;
+	top:0;
+}
+@media screen and (max-width: 720px){
+	nav{
+		width: 100%;
+		position: relative;
+		padding:10px; 
+	}
+	.main-container{
+		margin:10px;
+		padding-top: 20px;
+	}
+	.sub-menu{
+		float: initial;
+		width: 100%;
+	}
+	.sub-menu li{
+		display: inline;
+		padding-left: 0;
+	}
+	#mobile-menu{
+		display: block;
+	}
+	.menu-info{
+		padding-left: 0;
+	}
+}

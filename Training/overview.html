@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JST</title>
+	<link type="text/css" rel="stylesheet" href="../Assets/style.css" />
+	<link type="text/css" rel="stylesheet" href="../Assets/table.css" />
+	<link href="../Assets/css/all.css" rel="stylesheet">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body class="cl_primary">
+
+	<nav></nav>
+
+	<div class="main-container font_pairs font_accents">
+		<div class="sub-menu-ul"></div>
+
+		<div class="overview">
+		<h1 class="font_primary">Pelatihan jaringan saraf tiruan</h1>
+		<p>Jaringan Syaraf Tiruan (JST) disebut
+			juga Artificial Neural Network (ANN) adalah
+			bagian dari kecerdasan buatan atau
+			Artificial Intelligence (AI) yang sering
+			digunakan dalam berbagai aplikasi salah
+			satunya adalah peramalan/prediksi.</p>
+		<p>pada tugas akhir ini pendekatan JST yang digunakan adalah pendekatan <i>supervised learning</i> dimana JST dapat melakukan peramalan/prediksi dengan "mempelajari" data yang telah ada sebelumnya atau biasa disebut data latih. data latih adalah data yang sudah memiliki hasil atau nilai target. data latih dapat dipilih pada menu <b>Data Per tahun</b> dimana user memilih data yang digunakan untuk pelatihan mulai dari tahun-tahun sebelumnya</p>
+		
+		JST memiliki beberapa parameter dalam melakukan pelatihan yang dapat diatur pada menu <b>
+		Setting</b>, antara lain:
+		<ul>
+			<li>Jumlah layer tersembunyi</li>
+			<li>Jumlah neuron pada layer tersembunyi</li>
+			<li>Learning Rate</li>
+			<li>Maksimal Epoch</li>
+		</ul>
+		<p>Komponen JST terdiri dari layer masukkan (nilai variabel-variabel)
+		layer tersembunyi, dan layer output (nilai target).<br/>layer tersembunyi berfungsi untuk mengubah nilai dari layer input sampai mendekati nilai dari target, hasil dari proses ini adalah bobot yang mampu melakukan peramalan/prediksi dengan memberikan nilai target untuk data baru, data yang tidak memiliki target</p>
+		<p>Neuron adalah 'containers' yang memiliki fungsi matematika di dalamnya dimana neuron akan mengubah nilai yang masuk kedalamnya pada range tertentu menggunakan fungsi matematika. jumlah neuron pada layer input sama dengan jumlah variabel yang digunakan, begitu juga dengan layer output. pada tugas akhir ini terdapat 7 neuron input dan 1 neuron output. sedang untuk jumlah neuron pada layer tersembunyi ditentukan oleh user. dimana banyak dan sedikit jumlah neuron akan berpengaruh pada lama tidaknya pelatihan.</p>
+		<p>Learning rate adalah besaran angka yang akan dikalikan dengan bobot pada tiap iterasi, antara 0,1 sampai dengan 1.0 dimana semakin besar angkanya pelatihan akan semakin cepat tetapi akan berakibat pada kurangnya akurasi peramalan/prediksi. begitu juga sebaliknya semakin kecil nilainya maka pelatihan semakin lama tetapi akurasi bisa jadi semakin tinggi. dalam artian lain seberapa teliti JST dalam mempelajari data latih. contoh ketika JST digunakan untuk mempelajari pengenalan huruf I dan L dengan menggunakan learning rate yang besar maka besar kemungkinan semua prediksi menghasilkan satu jawaban saja karena kedua huruf tersebut memiliki kesamaan</p>
+		<p>Maksimal epoch adalah jumlah siklus pelatihan dengan menggunakan semua data latih. jika ada 150 data artinya dalam 1 epoch ada 150 iterasi.</p>
+		</div>
+	</div>
+	<script type="module" src='./overview.js'></script>
+</body>
+</html>

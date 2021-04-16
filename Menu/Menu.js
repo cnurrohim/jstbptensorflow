@@ -1,19 +1,19 @@
 export function createNav(activeMenu){
 	const menus = [
 		{
-			href:'../Training/datapervariable.html',
+			href:'../Training/overview.html',
 			class:'',
-			menu:'Training',
+			menu:'Pelatihan',
 			icon:'fas fa-brain icon-menu',
 		},
 		{
-			href:'../Pengujian/datapertahun.html',
+			href:'../Pengujian/overview.html',
 			class:'',
 			menu:'Pengujian',
 			icon:'fas fa-check-double icon-menu',
 		},
 		{
-			href:'../Prediksi/datapertahun.html',
+			href:'../Prediksi/overview.html',
 			class:'',
 			menu:'Prediksi',
 			icon:'fas fa-book-reader icon-menu',
@@ -35,8 +35,10 @@ export function createNav(activeMenu){
 
 	const toggleNav = document.createElement('span');
 	toggleNav.addEventListener('click',toggleMenu,false);
-	toggleNav.innerHTML = "<";
-	nav.appendChild(toggleNav);
+	toggleNav.className = "fas fa-bars icon-menu font_accents cl_accents";
+	toggleNav.setAttribute('id','mobile-menu');
+	toggleNav.innerHTML = "";
+	document.body.appendChild(toggleNav);
 
 }
 
@@ -93,7 +95,7 @@ export function renderMenu(ulContainer,menus){
 
 function renderInfo(activeMenu,menus){
 	const menuInfo = document.createElement('div');
-	menuInfo.setAttribute('class','menu-info font_pairs');
+	menuInfo.setAttribute('class','menu-info font_pairs ft_size_detail');
 
 	const selectedMenu = menus.find((menu)=>{
 		return menu.menu == activeMenu
