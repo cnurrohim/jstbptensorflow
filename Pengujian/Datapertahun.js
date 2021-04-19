@@ -12,14 +12,16 @@ import {dataTableAsli} from '../Data/TableDataAsli.js';
 import {dataTableNormalisasi} from '../Data/TableDataNormalisasi.js';
 import {getFiturFromData,dataSetMatrix,tahunDataSet} from '../Data/DataMaster.js';
 
-dataTableAsli.displayTable(".data-table");
-dataTableNormalisasi.displayTable(".data-table-normalisasi");
 
 createNav('Pengujian');
 createSubNav('Data Per Tahun');
 
 let PengujianData = getStorage(dataPengujianStorage);
 let tahunPengujian = getStorage(tahunPengujianStorage);
+
+dataTableAsli.displayTable(".data-table");
+dataTableNormalisasi.displayTable(".data-table-normalisasi");
+
 
 PengujianData.forEach( function(tahunData, index) {
   if(tahunData.length > 0){
